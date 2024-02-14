@@ -49,10 +49,10 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['dsn']	   = '';
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'tDPWa0BpFzSm8NXu';
-$db['default']['database'] = 'vie';
+$db['default']['hostname'] = '85.187.128.10';
+$db['default']['username'] = 'walkersh8_sm';
+$db['default']['password'] = 'NepaL1234%';
+$db['default']['database'] = 'walkersh8_samarpan';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;
