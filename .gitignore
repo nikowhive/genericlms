@@ -5,8 +5,4 @@ logs/
 mvc/logs/
 .idea/
 mvc/session/*
-<<<<<<< HEAD
 mvc/cache/*
-=======
-mvc/cache/*
->>>>>>> e0fd2e151e41076dcd3bf7db776c00fda59b2fec
