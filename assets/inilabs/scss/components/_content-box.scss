@@ -1,0 +1,26 @@
+
+/**
+ *
+ * content-box
+ *used in aside sidebar
+ */
+
+ .content-box {
+     display: flex;
+     flex-wrap: nowrap;
+     align-items:flex-start;
+     &--blockquote {
+         border-left:2px solid var(--themeColor);
+         background-color: #f9f9f9;
+         padding:12px 16px;
+     }
+     &-text {
+         flex:1;
+     }
+     .content-box-btn {
+        margin-left: 8px;
+        flex: 0 0 auto;
+        margin-top: -8px;
+     }
+ }
+

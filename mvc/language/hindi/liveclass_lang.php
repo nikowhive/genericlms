@@ -1,0 +1,19 @@
+<?php 
+$lang['panel_title'] = 'लाइव क्लास';
+$lang['add_title'] = 'एक लाइव क्लास जोड़ें';
+$lang['slno'] = '#';
+$lang['liveclass_title'] = 'शीर्षक';
+$lang['liveclass_date'] = 'तारीख';
+$lang['liveclass_duration'] = 'समयांतराल';
+$lang['liveclass_classes'] = 'कक्षा';
+$lang['liveclass_section'] = 'अनुभाग';
+$lang['liveclass_subject'] = 'विषय';
+$lang['liveclass_select_classes'] = 'कक्षा का चयन करें';
+$lang['liveclass_select_section'] = 'अनुभाग का चयन करें';
+$lang['liveclass_select_subject'] = 'विषय का चयन करें';
+$lang['action'] = 'कार्य';
+$lang['edit'] = 'संपादित करें';
+$lang['delete'] = 'हटाएं';
+$lang['join'] = 'शामिल हों';
+$lang['add_liveclass'] = 'लाइव क्लास जोड़ें';
+$lang['update_liveclass'] = 'लाइव क्लास को अपडेट करें';

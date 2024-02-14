@@ -1,0 +1,17 @@
+{
+  "name": "my-super-amazing-app",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@wiris/mathtype-ckeditor4": "^7.22.0"
+  },
+  "devDependencies": {
+    "node-sass": "6.0.1"
+    },
+   "scripts" : {
+    "frontend:build-bs": "node-sass --output-style compressed  --source-map true  assets/inilabs/bootstrap.scss assets/inilabs/bootstrap.min.css",
+    "frontend:build-main": "npm run frontend:build-bs && node-sass --output-style compressed  --source-map true  assets/inilabs/frontend.scss assets/inilabs/frontend.min.css",
+    "frontend:watch-bs": "node-sass -w  --output-style compressed --source-map true --include-path assets/inilabs/scss/ assets/inilabs/bootstrap.scss assets/inilabs/bootstrap.min.css",
+    "frontend:watch-main": "node-sass -w  --output-style compressed --source-map true --include-path assets/inilabs/scss/ assets/inilabs/frontend.scss assets/inilabs/frontend.min.css"
+   }
+}

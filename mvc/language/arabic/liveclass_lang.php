@@ -1,0 +1,19 @@
+<?php 
+$lang['panel_title'] = 'لايف كلاس';
+$lang['add_title'] = 'أضف فصل دراسي مباشر';
+$lang['slno'] = '#';
+$lang['liveclass_title'] = 'عنوان';
+$lang['liveclass_date'] = 'تاريخ';
+$lang['liveclass_duration'] = 'المدة الزمنية';
+$lang['liveclass_classes'] = 'صف دراسي';
+$lang['liveclass_section'] = 'الجزء';
+$lang['liveclass_subject'] = 'موضوع';
+$lang['liveclass_select_classes'] = 'حدد فئة';
+$lang['liveclass_select_section'] = 'حدد القسم';
+$lang['liveclass_select_subject'] = 'حدد الموضوع';
+$lang['action'] = 'عمل';
+$lang['edit'] = 'تعديل';
+$lang['delete'] = 'حذف';
+$lang['join'] = 'انضم';
+$lang['add_liveclass'] = 'أضف فصل دراسي مباشر';
+$lang['update_liveclass'] = 'تحديث Live Class';

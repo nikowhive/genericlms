@@ -1,0 +1,169 @@
+/*=============================================
+=           sidebar-menu        =
+=============================================*/
+.sidebar-menu {
+    @include breakpoint(md, min) {  
+        transition: all 0.3s ease-out;
+    }
+    // box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2) !important;
+    height: calc(100vh - var(--headerHeight)) !important;
+    &.sticky {
+        position: fixed;
+        top: 0px;
+        height: calc(100vh) !important;
+        background: inherit;
+        @include breakpoint(md, min) {
+            width: var(--sidebar-width);
+        }
+    }
+    overflow-y: auto;
+    @include noScrollBars();
+    &:hover {
+        @include customscrollbar($size: 6px, $trackcolor: none, $thumbcolor: #D4D4D4, $thumbhovercolor:#BDBDBD);
+        scroll-padding: 50px 50px 0 50px;
+    }
+
+    &.hovered {
+        @include noScrollBars();  
+    }
+
+    //sidebar-menu > li
+    > li {
+        //sidebar-menu > li >a
+        > a {
+            color: white;
+            font-size: 16px;
+            position: relative;
+            display: flex !important;
+            align-items: center;
+            padding: 10px 45px 10px 15px !important;
+            @include breakpoint(md, min) {
+                flex-direction: column;
+                padding: 10px 2px !important;
+            }
+            //sidebar-menu > li >a:hover
+            &:hover {
+                // background-color: var(--themeColorHover);
+                // color: white;
+            }
+
+            .fa {
+                font-size: 24px !important;
+                width: auto !important;
+            }
+            //sidebar-menu > li >a > span
+            span {
+                font-size: 12px;
+                text-align: center;   
+                margin-left: 8px;
+                // .left-side.collapse-left sidebar-menu > li >a > span
+                @include breakpoint(md, min) {
+                    margin-left: 0;
+                    margin-top: 4px;
+                    @at-root .left-side.collapse-left & {
+                        display: none;
+                    }
+                }
+            }
+            //sidebar-menu > li >a > .pull-right
+            .pull-right {
+                position: absolute;
+                /* margin-top: -50%; */
+                right: 16px;
+                top: 50%;
+                transition: transform 0.3s ease-in-out;
+                @at-root .treeview.active .pull-right {
+                    transform: translateY(-50%) rotate(-90deg) scaleX(-1);
+                }
+                transform: translateY(-50%) rotate(90deg) scaleX(-1);
+                @include breakpoint(md, min) {
+                    display: none;
+                }
+            }
+        }
+
+        //sidebar-menu >li.active
+        &.active {
+            //sidebar-menu >li.active >a {
+            color: var(--themeColor);
+            background: white;
+
+            > a {
+                color: var(--themeColor);
+                background: white;
+            }
+        }
+
+        &:not(.active) {
+            //sidebar-menu > li >a
+            > a {
+                //sidebar-menu > li >a:hover
+                &:hover {
+                    background-color: var(--themeColorHover);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    cursor: pointer;
+    display: none;
+    @at-root .menu-toggle & {
+        display: block;
+        @include breakpoint(md, min) {
+            display: none;
+        }
+    }
+    
+}
+
+
+.show-more-menu, .show-less-menu {
+    a {
+        cursor: pointer;
+    }
+}
+
+
+//scrollbar 
+.theme-redsidebar .sidebar-menu {
+    &:hover {
+        @include customscrollbar($size: 6px, $trackcolor: none, $thumbcolor: #F2BCB5, $thumbhovercolor:#FBEBE9 );
+    }
+ 
+}
+.theme-yellowsidebar .sidebar-menu {
+    &:hover {
+        @include customscrollbar($size: 6px, $trackcolor: none, $thumbcolor: #F8C87C, $thumbhovercolor:#FCE3BB );
+    }
+ 
+}
+.theme-purplesidebar .sidebar-menu {
+    &:hover {
+        @include customscrollbar($size: 6px, $trackcolor: none, $thumbcolor: #A0559E, $thumbhovercolor:#B573B3 );
+    }
+ 
+}
+.theme-greensidebar .sidebar-menu {
+    &:hover {
+        @include customscrollbar($size: 6px, $trackcolor: none, $thumbcolor: #00DB77, $thumbhovercolor:#0AFF8F );
+    }
+ 
+}
+
+.sidebar-menu {
+    &.hovered {
+        @include noScrollBars();  
+    }
+}

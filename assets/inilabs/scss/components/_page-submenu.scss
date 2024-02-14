@@ -1,0 +1,220 @@
+@mixin customscrollbar($size: 8px, $trackcolor: none, $thumbcolor: $gray-500, $thumbhovercolor: $gray-700) {
+    &::-webkit-scrollbar {
+      width: $size;
+      height: $size;
+    }
+  
+    // Track
+    &::-webkit-scrollbar-track {
+      background: $trackcolor;
+    }
+  
+    // Handle
+    &::-webkit-scrollbar-thumb {
+      background: $thumbcolor;
+      border-radius: 5px;
+      background-clip: padding-box;
+    }
+  
+    // Handle on hover
+    &::-webkit-scrollbar-thumb:hover {
+      background: $thumbhovercolor;
+    }
+  }
+  
+.page-submenu {
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x:hidden;
+    height: calc(100vh - 50px);
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    width:55px !important;
+    top:var(--pagesubmenuTopOffset);
+    
+
+ @media(min-width:768px){
+     width:var(--courseSubmenuWidth) !important;
+     padding-bottom: 43px;
+     @include noScrollBars();
+     &:hover {
+         @include customscrollbar($size: 6px, $trackcolor: none, $thumbcolor: #D4D4D4, $thumbhovercolor:#BDBDBD);
+         scroll-padding: 50px 50px 0 50px;
+     }
+ }
+   
+    box-shadow: 1px 0 2px rgba(0,0,0,0.25);
+    transition:all 0.3s ease;
+ 
+    @at-root :root {
+        --courseSubmenuWidth:200px;
+        --pagesubmenuTopOffset:56px;
+        @media(min-width:768px){
+            --pagesubmenuTopOffset:0px;
+        }
+    }
+    height: calc(100vh - calc(var(--headerHeight)  - var(--pagesubmenuTopOffset)));
+    // height: 100%;
+    // @include noScrollBars();
+    &.sticky {
+        position: fixed;
+        height: calc(100% - var(--pagesubmenuTopOffset));
+        @media(min-width:768px){
+        top: 0px;
+        left:var(--sidebarWidth);
+
+        // height: calc(100vh) !important;
+        }
+    }
+    .menu {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        &-item {
+            // margin: 16px 0;
+        }
+        &-link {
+            font-size: 13px;
+            padding: 10px 10px 10px 10px;
+            display: flex !important;  
+            align-items: center;
+            // border-radius: 4px;
+            color:var(--bodyColor) !important;
+            text-transform: capitalize;
+            // &:hover {
+            //     background-color: #f9f9f9;
+            // }
+                
+            span {
+                margin-left: 8px;
+               
+            }
+            .fa {
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                flex: 0 0 35px;
+                font-size: 16px;
+                background-color: var(--themeColorLight) !important;
+                // background-color:transparent !important;
+                // color: white;
+                margin-top: 4px;
+              
+            }
+
+            &.active {
+                background-color: var(--themeColorLight) !important;
+                // color: #fff;
+                .fa {
+                    background-color: var(--themeColor) !important;
+                    color:white !important;
+                }
+            }
+
+            &:not(.active):hover {
+                background-color: #f9f9f9;
+            }
+        }
+    }
+}
+
+
+
+.treeview-menu-header{
+    flex-direction: row;
+    @media(min-width:768px){
+
+        border-bottom: 1px solid #a4b1c2;
+    }
+    .fa {
+        background-color: transparent !important;
+        color: var(--bodyColor) !important
+    }
+}
+
+@media(min-width:768px){
+    .page-submenu {
+        .menu-overlay {
+            display: none;
+        }
+       
+    }
+}
+@media(max-width:767px){
+
+    .page-submenu  {
+        // position: fixed;
+        // left: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        // height: calc(100vh - 55px);
+        .menu {
+            z-index: 50;
+            position: relative;
+            background: white;
+            flex:1;
+            .treeview-menu-header {
+                display:none;
+            }
+       }
+        .menu-link span {
+            display: none !important;
+        }
+
+        + .course-content,
+        + .col-md-10{
+            margin-left:0 !important;
+            padding-left: 0 !important;
+        }
+        &--shown {
+            width:auto !important;
+            left:0;
+            
+            .menu-link span {
+                display: block !important;
+            }
+            .menu-overlay {
+                display: block;
+            }
+        }
+        
+    }
+   
+}
+
+.page-submenu-toggler {
+    position: absolute;
+    top: 0px;
+    left:0;
+    right:0;
+    z-index: 41;
+    padding:16px;
+    font-weight: bold;
+    display:flex !important;
+    justify-content: flex-start;
+    background-color: white;
+    align-items: center;
+    @media(min-width:768px){
+       display: none !important;
+   }
+   @at-root .menu-toggle & {
+    z-index: 39;
+   }
+    &.sticky {
+        position: fixed;
+        top: 0px;
+ 
+    }
+    span {
+        margin-left:16px;
+    }
+}
+
+ .right-side--fullHeight  .page-submenu-toggler {
+     display:none !important;
+ }

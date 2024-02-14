@@ -1,0 +1,35 @@
+//.row
+
+.row {
+    &-flex {
+        display:flex;
+        flex-wrap: wrap;
+    }
+    &[class*="flex"]{
+
+        > [class*="col-"] {
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        .col-auto {
+            flex:0 0 auto;
+            width:auto;
+        }
+    }
+}
+
+.row-md-flex {
+    @include breakpoint(md, min){
+        display:flex;
+        flex-wrap: wrap;
+    }
+}
+
+.row-no-gutters {
+    margin:0;
+    >* {
+        padding:0;
+    }
+
+}

@@ -1,0 +1,122 @@
+
+/**
+ *
+ * calendar
+ *
+ */
+
+ .calendar {
+    //  padding-bottom: 16px;
+     &-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        .aside-header-btn {
+            --size:24px;
+            font-size: 14px;
+        }
+     }
+     &-month {
+         &-switcher {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap:16px;
+            select {
+                border:none;
+            }
+         }
+         &-prev, &-next {
+            --size:8px;
+            width:calc(var(--size) * 3) ;
+            height:calc(var(--size) * 3) ;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            font-size: calc(var(--size) * 3) ;
+     
+            &:hover {
+                background: #f9f9f9;
+
+                
+            }
+         }
+     }
+    &-week {
+        opacity: 0;
+        transition: opacity  0.3s;
+        transition-delay: 0.5s;
+        &.slick-initialized {
+            opacity: 1;
+            transition: opacity  0.3s;
+        }
+       &:not(.slick-initialized){
+        display:flex;
+        flex-flow:row nowrap;
+        gap:16px;
+        overflow-x:auto;
+       }
+        
+    }
+    &-day {
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        &-name {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            color:var(--themeColor);
+            text-align: center;
+        }
+      
+        &-date {
+            --size:32px;
+            --color:#F1F2F7;
+         
+            display:inline-flex;   
+            text-align: center;
+            justify-content:  center;
+            font-size: 18px;
+            margin-top:12px;
+            margin-bottom:12px;
+            position: relative;
+            z-index: 1;
+            font-weight: normal;
+            transition: all 0.3s;
+            cursor: pointer;
+            &:after {
+                content:"";
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform:translateX(-50%) translateY(-50%);
+                width:var(--size);
+                height:var(--size);
+                background-color:var(--color);
+                display: inline-block;
+                z-index: -1;
+                border-radius: 50%;
+                transition: all 0.3s;
+            }
+
+            &--current {
+                --color:var(--themeColor);
+                color:white;
+                font-weight:bold;
+            }
+            &:hover {
+                --color:var(--themeColorLight);
+            }
+            
+            
+        }
+        &-select {
+            display: none;
+            &:checked +.calendar-day-date {
+                --color:var(--themeColor);
+                color:white;
+                font-weight:bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,360 @@
+// :root {
+//     --primary: #00a65a;
+// }
+
+// .w-100 {
+//     width: 100%;
+// }
+// .d-none {
+//     display: none !important;
+// }
+/*=============================================
+=            right-side customization        =
+=============================================*/
+// .right-side {
+//     &--fullHeight {
+//         --headerHeight: 50px;
+//         --footerHeight: 48px;
+//         --gutter-y: 20px;
+//         min-height: calc(100vh - calc(var(--headerHeight) + var(--footerHeight)));
+//         margin-top: calc(var(--gutter-y) * -1);
+//         margin-bottom: calc(var(--gutter-y) * -1);
+//         margin-right: -30px;
+//         display: flex;
+//     }
+// }
+
+/*=============================================
+=            cards            =
+=============================================*/
+
+// .card {
+//     background-color: #fff;
+//     border-radius: 4px;
+//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+//     background-color: #fff;
+//     padding: 16px;
+//     position: relative;
+//     &-body {
+//         display: flex;
+//         flex-direction: column;
+//         height: 100%;
+//     }
+
+//     &-title {
+//         margin: 0;
+//         margin-bottom: 16px;
+//         font-weight: bold;
+//         font-size: 20px;
+//     }
+//     .lists {
+//         list-style: none;
+//         padding: 0;
+//         flex-grow: 1;
+//         overflow-y: auto;
+//         > li {
+//             padding: 8px 0;
+//             &:not(:last-child) {
+//                 border-bottom: 1px solid #f1f1f1;
+
+//                 padding: 8px 0;
+//             }
+//         }
+//     }
+
+//     &-anchor-absolute {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         width: 100%;
+//         height: 100%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         flex-direction: column;
+//         background-color: #fff;
+//         transition: all 0.3s;
+//         &:hover {
+//             background-color: var(--themeColor);
+//             * {
+//                 color: white;
+//             }
+//         }
+
+//         .fa {
+//             font-size: 64px;
+//         }
+//         span {
+//             font-size: 24px;
+//         }
+//     }
+// }
+
+// .cards {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//     grid-auto-rows: 400px;
+//     grid-gap: 30px;
+   
+//     .card {
+//         display:flex;
+//         flex-direction: column;
+//         height: 100%;
+//         padding:0;
+//         img {
+//             flex: 0 0 180px;
+//             object-fit: cover;
+//         }
+//         .card-body {
+//             padding:16px;
+//             flex-grow: 1;
+//             display: flex;
+//             flex-direction: column;
+//             overflow-y:auto;
+//             height: auto;
+//             .lists {
+//                 flex-grow:1;
+//             }
+//         }
+//     }
+// }
+
+/*=============================================
+=            boostrap modal pop up customization            =
+=============================================*/
+// .modal {
+//     &-dialog {
+//         height: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         min-width: 500px;
+//     }
+
+//     &-footer {
+//         margin-top: 0;
+//     }
+
+//     &-content {
+//         width: 500px;
+//     }
+// }
+
+/*=============================================
+=           form customization        =
+=============================================*/
+// .form-control {
+//     & + .select2-container {
+//         width: 100% !important;
+//     }
+// }
+// .form-group {
+//     > label {
+//         font-weight: bold;
+//     }
+// }
+
+/*=============================================
+=            page-submenu            =
+=============================================*/
+
+// .page-submenu {
+//     background-color: #fff;
+//     overflow-y: auto;
+//     height: calc(100vh - calc(var(--headerHeight) + var(--footerHeight)));
+//     .menu {
+//         list-style: none;
+//         padding: 0;
+//         &-item {
+//             margin: 16px 0;
+//         }
+//         &-link {
+//             font-size: 14px;
+//             padding: 8px 16px;
+//             display: flex;
+//             align-items: center;
+//             border-radius: 4px;
+//             text-transform: capitalize;
+//             &:hover {
+//                 background-color: #f9f9f9;
+//             }
+//             &.active {
+//                 // background-color: var(--primary);
+//                 // color: #fff;
+//             }
+//             .fa {
+//                 width: 35px;
+//                 height: 35px;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 border-radius: 50%;
+//                 flex: 0 0 35px;
+//                 background-color: var(--themeColor);
+//                 color:white;
+//                 margin-right: 8px;
+//             }
+//         }
+//     }
+// }
+
+
+/*=============================================
+=            font scale             =
+=============================================*/
+
+// body {
+//     font-size: 16px;
+//     color: #222;
+// }
+// .box .box-header > .fa,
+// .box .box-header > .glyphicon,
+// .box .box-header > .ion,
+// .box .box-header .box-title {
+//     font-size: 16px;
+//     font-weight: bold;
+// }
+// .profile-db-head h1 {
+//     font-size: 18px;
+// }
+// .profile-db-head p {
+//     font-size: 14px;
+// }
+// .btn-xs {
+//     font-size: 14px;
+// }
+// text {
+//     font-size: 14px !important;
+// }
+// .sidebar .sidebar-menu > li > a {
+//     font-size: 16px;
+// }
+// .treeview-menu a {
+//     font-size: 16px;
+// }
+// .treeview .fa {
+//     font-size: 16px !important;
+// }
+
+// .user-panel > .info > a {
+//     font-size: 14px;
+// }
+// .user-panel > .info > p {
+//     font-size: 16px;
+// }
+// .small-box p {
+//     font-size: 16px;
+// }
+// .box > .box-header > .breadcrumb {
+//     font-size: 14px;
+// }
+// .page-header > a {
+//     font-size: 16px;
+// }
+// .form-control {
+//     font-size: 16px;
+// }
+// .table-bordered > thead > tr > th,
+// .table-bordered > tbody > tr > td {
+//     font-size: 16px;
+// }
+// .form-horizontal .control-label {
+//     font-size: 14px;
+// }
+// .btn {
+//     font-size: 16px;
+// }
+// .onoffswitch-small-inner:before,
+// .onoffswitch-small-inner:after {
+//     font-size: 14px;
+// }
+// .sidebar .sidebar-menu .treeview-menu > li > a {
+//     font-size: 15px;
+// }
+// table th {
+//     font-weight: bold !important;
+// }
+// table td {
+//     color: #222 !important;
+// }
+// .sidebar .sidebar-menu .treeview-menu > li a {
+//     display: flex;
+//     .fa {
+//         margin-top: 4px;
+//         margin-right: 8px;
+//     }
+// }
+// .profile-view-tab {
+//     font-size: 16px;
+//     color: #222;
+// }
+// .nav-tabs > li > a {
+//     font-weight: bold;
+// }
+// .btn-sm-cs {
+//     font-size: 15px;
+// }
+// .navbar-nav > .notifications-menu > .dropdown-menu > li.header,
+// .navbar-nav > .messages-menu > .dropdown-menu > li.header,
+// .navbar-nav > .tasks-menu > .dropdown-menu > li.header {
+//     font-size: 16px;
+//     font-weight: bold;
+// }
+// .navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > h4 {
+//     font-weight: bold;
+// }
+// .navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > p {
+//     color: #222;
+//     font-size: 14px;
+// }
+
+// .highcharts-contextmenu {
+//     * {
+//         font-size: 14px !important;
+//         padding: 4px 10px !important;
+//     }
+// }
+
+
+
+/*=============================================
+=            switch-new            =
+=============================================*/
+
+// .switch {
+//     cursor: pointer;
+//     &--checked,
+//     &--unchecked {
+//         font-size:24px;
+//     }
+//     &--checked {
+//         display: none;
+//         color:#00A146;
+//     }
+//     &__input {
+//         position: absolute;
+//         left:-9999px;
+//         width:0;
+//         height:0;
+//         overflow: hidden;
+//         opacity: 0;
+//         &:checked {
+//             ~ {
+//                 .switch--checked {
+//                     display: inline-block;
+//                 }
+//                 .switch--unchecked {
+//                     display: none;
+//                 }
+//             }
+//         }
+//     }
+    
+// }
+
+
+
+ 
+ 

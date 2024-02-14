@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "Arial";
+    box-sizing: border-box;
+}
+
+table {
+    border-spacing: 1px;
+}
+
+table,
+th,
+td {
+    border: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+.container {
+    width:100%;
+    /* width: 96%; */
+    /* margin: 0 auto; */
+}
+
+.trim-yaxis-td>tbody>tr>td:first-child {
+    padding-left: 0;
+}
+
+.trim-yaxis-td>tbody>tr>td:last-child {
+    padding-right: 0;
+}
+
+.grade-sheet {
+    background-color: #212121;
+    color: white !important;
+    text-align: center;
+}
+
+.table-fluid {
+    width: 100%;
+}
+
+.reports,
+.reports th,
+.reports td,
+.grade-table,
+.grade-table th,
+.grade-table td {
+    border: 1px solid #000;
+}
+
+.reports th {
+    background-color: #f9f9f9;
+}
+
+.reports .odd {
+    background-color: #D2E0BC;
+}
+
+.reports tr:nth-of-type(odd) td {
+    background-color: #D2E0BC;
+}
+
+.reports tr:last-child td {
+    background-color: #f9f9f9;
+}
+
+.remarks-table>tbody>tr>td {
+    width: 50%;
+}
+
+.class-teacher-remarks {
+    border: 1px solid #000;
+}
+
+.dot-border-bottom {
+    border-top: 1px dotted black;
+    padding: 5px 0;
+}
+
+.dot-border-top {
+    border-top: 1px dotted black;
+    padding: 5px 0;
+    width: 121px;
+}
+
+.class-teacher-remarks td {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.class-teacher-remarks td p {
+    margin-bottom: 16px;
+}
+
+.footer-td {
+    background-color: #f9f9f9;
+    border-top: 1px solid black;
+    padding: 4px 0;
+}
+
+.report-canvas {
+    overflow-x: auto;
+    width:120%;
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+
+ 
+
+    .header {
+        display:flex;
+        background:red;
+        width:100%;
+        justify-content: center;
+        align-items: center;
+    }

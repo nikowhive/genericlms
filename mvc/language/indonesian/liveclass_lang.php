@@ -1,0 +1,19 @@
+<?php 
+$lang['panel_title'] = 'Kelas Live';
+$lang['add_title'] = 'Tambahkan Kelas Live';
+$lang['slno'] = '#';
+$lang['liveclass_title'] = 'Judul';
+$lang['liveclass_date'] = 'Tanggal';
+$lang['liveclass_duration'] = 'Durasi';
+$lang['liveclass_classes'] = 'Kelas';
+$lang['liveclass_section'] = 'Bagian';
+$lang['liveclass_subject'] = 'Subyek';
+$lang['liveclass_select_classes'] = 'Pilih Kelas';
+$lang['liveclass_select_section'] = 'Pilih Bagian';
+$lang['liveclass_select_subject'] = 'Pilih Subjek';
+$lang['action'] = 'Tindakan';
+$lang['edit'] = 'Edit';
+$lang['delete'] = 'Menghapus';
+$lang['join'] = 'Ikuti';
+$lang['add_liveclass'] = 'Tambahkan Kelas Live';
+$lang['update_liveclass'] = 'Perbarui Kelas Langsung';

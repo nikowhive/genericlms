@@ -1,0 +1,18 @@
+
+/**
+ *
+ * header menu
+ *
+ */
+
+ .navbar-right {
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    .navbar-nav {
+        flex:1;
+        display: flex;
+        justify-content: flex-end;
+ 
+    }
+}

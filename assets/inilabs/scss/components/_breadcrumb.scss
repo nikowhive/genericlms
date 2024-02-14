@@ -1,0 +1,26 @@
+
+/**
+ *
+ * breadcrumb
+ *
+ */
+
+ .breadcrumb {
+    margin-bottom:0;
+    padding: 0;
+      li {
+          &+li {
+              &:before {
+              color:#212121 !important;
+          }
+          }
+          &.active {
+               display: inline-block !important;
+          color:#999 !important;
+          }
+          >a {
+               color:var(--themeColor);
+          font-weight: bold;
+          }
+      }
+  }

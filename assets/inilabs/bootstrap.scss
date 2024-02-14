@@ -1,0 +1,47 @@
+// scss-docs-start import-stack
+// Configuration
+@import "./scss/vendor/bs5/functions";
+@import "./scss/base/bs-variables";
+@import "./scss/vendor/bs5/variables";
+@import "./scss/vendor/bs5/mixins";
+@import "./scss/vendor/bs5/utilities";
+
+// Layout & components
+@import "./scss/vendor/bs5/root";
+@import "./scss/vendor/bs5/reboot";
+@import "./scss/vendor/bs5/type";
+@import "./scss/vendor/bs5/images";
+@import "./scss/vendor/bs5/containers";
+@import "./scss/vendor/bs5/grid";
+@import "./scss/vendor/bs5/tables";
+@import "./scss/vendor/bs5/forms";
+@import "./scss/vendor/bs5/buttons";
+@import "./scss/vendor/bs5/transitions";
+@import "./scss/vendor/bs5/dropdown";
+@import "./scss/vendor/bs5/button-group";
+@import "./scss/vendor/bs5/nav";
+@import "./scss/vendor/bs5/navbar";
+@import "./scss/vendor/bs5/card";
+@import "./scss/vendor/bs5/accordion";
+@import "./scss/vendor/bs5/breadcrumb";
+@import "./scss/vendor/bs5/pagination";
+@import "./scss/vendor/bs5/badge";
+@import "./scss/vendor/bs5/alert";
+@import "./scss/vendor/bs5/progress";
+@import "./scss/vendor/bs5/list-group";
+@import "./scss/vendor/bs5/close";
+@import "./scss/vendor/bs5/toasts";
+@import "./scss/vendor/bs5/modal";
+@import "./scss/vendor/bs5/tooltip";
+@import "./scss/vendor/bs5/popover";
+@import "./scss/vendor/bs5/carousel";
+@import "./scss/vendor/bs5/spinners";
+@import "./scss/vendor/bs5/offcanvas";
+@import "./scss/vendor/bs5/placeholders";
+
+// Helpers
+@import "./scss/vendor/bs5/helpers";
+
+// Utilities
+@import "./scss/vendor/bs5/utilities/api";
+// scss-docs-end import-stack

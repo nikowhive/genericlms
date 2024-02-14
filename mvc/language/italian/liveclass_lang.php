@@ -1,0 +1,19 @@
+<?php 
+$lang['panel_title'] = 'Classe dal vivo';
+$lang['add_title'] = 'Aggiungi una lezione dal vivo';
+$lang['slno'] = '#';
+$lang['liveclass_title'] = 'Titolo';
+$lang['liveclass_date'] = 'Data';
+$lang['liveclass_duration'] = 'Durata';
+$lang['liveclass_classes'] = 'Classe';
+$lang['liveclass_section'] = 'Sezione';
+$lang['liveclass_subject'] = 'Soggetto';
+$lang['liveclass_select_classes'] = 'Seleziona Classe';
+$lang['liveclass_select_section'] = 'Seleziona Sezione';
+$lang['liveclass_select_subject'] = 'Seleziona Oggetto';
+$lang['action'] = 'Azione';
+$lang['edit'] = 'modificare';
+$lang['delete'] = 'Elimina';
+$lang['join'] = 'Aderire';
+$lang['add_liveclass'] = 'Aggiungi lezione dal vivo';
+$lang['update_liveclass'] = 'Aggiorna lezione dal vivo';

@@ -1,0 +1,117 @@
+.card-gallery {
+    display: flex;
+    flex-wrap:wrap;
+    gap:4px;
+    .card-img:before {
+            padding-top: 75% !important;
+    }
+    >* {
+        flex: 1 1 30% !important;
+        width:30% !important;
+          max-height: 300px;
+        // height:300px;
+        // background: red;
+      
+    }
+    
+    .image-wrap {
+        position: relative;
+        display: block;
+        width:100%;
+         height: 100% !important;
+        &:before {
+             padding-top: 75% !important;
+             content:"";
+             display: block;
+        }
+        
+        img {
+            position: absolute !important;
+            width: 100%;
+            height: 100% !important;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            object-fit: cover;
+        }
+    }
+}
+
+.commentbox {
+    border-top:1px solid #e2e2e2;
+    max-height: 400px;
+    overflow-y: auto;
+    &__postcomment {
+        border-top:1px solid #e2e2e2;
+    }
+
+    .icon-round__trash {
+        @include breakpoint(lg, min) {
+            opacity:0;
+            pointer-events: none;
+        }
+    }
+
+    .card-header:hover .icon-round__trash {
+        opacity: 1;
+        pointer-events: visible;
+    }
+
+}
+
+.activities--actions {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)) ;
+    display: grid;
+    gap:8px;
+    > .btn-app {
+        margin:0px !important;
+        min-width: auto !important;
+        height: auto !important;
+        font-size: 16px !important;
+        .fa {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.activities-close {
+    @include breakpoint(lg, min) {
+        display: none;
+    }
+}
+
+@include breakpoint(lg, max) {
+#js-activities-sidebar {
+    position: fixed !important;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 1;
+    display: block;
+    transform:translateY(100%);
+    opacity: 0;
+    &.active {
+        transform:translate(0); 
+        opacity: 1;
+    }
+    .card {
+        margin-bottom:0;
+    }
+    .box-header {
+        position:relative;
+    }
+    .activities-close {
+        position: absolute;
+        right:16px;
+        top:8px;
+        --size:30px;
+       &:hover {
+            background-color:rgba(#fff, 0.3);
+            }
+       
+    }
+    
+   
+}
+}

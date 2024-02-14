@@ -1,0 +1,26 @@
+
+.box {
+    margin-top:16px;
+}
+.theme-greensidebar {
+    .box {
+        &-header {
+            background-color: var(--themeColor) !important;
+            * {
+                color:white;
+            }
+            a {
+                color:white; 
+            }
+        }
+    }
+}
+
+
+.boxes {
+    .box {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

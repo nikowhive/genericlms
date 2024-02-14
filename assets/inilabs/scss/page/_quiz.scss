@@ -1,0 +1,267 @@
+.quiz-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+    background: white;
+    padding: 20px;
+    &-block {
+        // background-color: #f1f1f1;
+        margin-top: 42px;
+        // padding-bottom:20px;
+        // &.affix {
+        //     position: fixed;
+        //     top: 0;
+        //     right: 0;
+        //     width: 30%;
+        // }
+    }
+}
+
+.question-filters {
+    display: inherit;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0px;
+    //margin-bottom: 12px;
+    align-items: flex-start;
+    background: white;
+    padding: 10px 0px 0px 20px;
+    &-block {
+        // background-color: #f1f1f1;
+        //margin-top: 42px;
+        // padding-bottom:20px;
+        // &.affix {
+        //     position: fixed;
+        //     top: 0;
+        //     right: 0;
+        //     width: 30%;
+        // }
+    }
+}
+
+.answer-block {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card--quiz {
+    --padding-x: 24px;
+    --padding-y: 20px;
+    .card-list {
+        padding: var(--padding-y) var(--padding-x);
+        border-bottom: 1px solid #ccc;
+
+        display: flex;
+        .icon-round {
+            flex: 0 0 auto;
+            margin-right: 16px;
+            & + * {
+                flex-grow: 1;
+            }
+        }
+        &--title {
+            border-bottom: 2px solid var(--themeColor);
+        }
+        &--item {
+            position: relative;
+            .dropdown {
+            }
+        }
+        &--button {
+            @include breakpoint(md, min) {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .card-body {
+        padding: var(--padding-y) var(--padding-x);
+    }
+    .section-title {
+        font-size: 20px;
+    }
+
+    .quiz-display {
+        flex-grow: 1;
+        &-header {
+            display: flex;
+            flex-grow: 1;
+        }
+        &-section {
+            flex-grow: 1;
+            margin-right: 16px;
+        }
+        &-type {
+            font-size: 14px;
+            color: var(--themeColor);
+            font-weight: bold;
+        }
+        .dropdown {
+            margin-right: -30px;
+            &-menu {
+                top: 40px;
+            }
+        }
+
+        &-answers {
+            display: flex;
+            list-style: lower-latin;
+            padding-left: 20px;
+            flex-wrap: wrap;
+
+            li {
+                padding: 4px 8px;
+            }
+            li:not(:last-child) {
+                margin-right: 32px;
+            }
+        }
+    }
+
+    .card-list--questions {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        border: 1px solid var(--themeColor) !important;
+        &:not(.added) {
+            border: none !important;
+            background-color: var(--themeColorLight);
+        }
+        // flex-wrap:wrap;
+        @include breakpoint(lg, max) {
+            flex-direction: column;
+        }
+        .quiz-display-header {
+            align-items: flex-start;
+            @include breakpoint(lg, max) {
+                flex-direction: column;
+            }
+            // flex-wrap:wrap;
+        }
+        .btn {
+            @include breakpoint(md, min) {
+                flex: 1 0 auto;
+            }
+            margin-top: 24px;
+        }
+        .quiz-display-section {
+            --gutter: 32px;
+            @include breakpoint(lg, max) {
+                margin-right: 0px;
+            }
+        }
+        .quiz-display-type {
+            margin-left: var(--gutter);
+        }
+        .quiz-display-title,
+        .quiz-display-answers {
+            position: relative;
+            padding-left: var(--gutter);
+            &:before {
+                content: attr(data-prefix);
+                display: inline-flex;
+
+                position: absolute;
+                left: 0;
+                background: var(--themeColor);
+                width: 20px;
+                height: 20px;
+                color: white;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+            }
+        }
+        .quiz-display-answers {
+            padding-left: calc(var(--gutter) + 20px) !important;
+            &:before {
+                top: 6px;
+            }
+        }
+        .form-check {
+            @include breakpoint(lg, min) {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    .answer-option-check {
+        display: flex;
+        align-items: center;
+
+        .form-check {
+            flex: 0 0 auto;
+        }
+        .md-form {
+            flex-grow: 1;
+        }
+    }
+
+    .button-wrapper {
+        display: flex;
+        @include breakpoint(md, min) {
+            justify-content: flex-end;
+        }
+    }
+}
+
+.card--quiz-Sidebar {
+    --offsetTop: 24px;
+    --width: 300.66px;
+    &.affix {
+        @include breakpoint(lg, min) {
+            top: var(--offsetTop);
+            width: var(--width);
+            position: fixed;
+        }
+    }
+
+    #quizFilters {
+        display: none;
+        &.in {
+            display: block;
+        }
+    }
+    .quiz-sidebar-title {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+            margin: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 20px;
+        }
+    }
+    .card-title {
+        display: none;
+    }
+    @include breakpoint(lg, min) {
+        .quiz-sidebar-title {
+            display: none;
+        }
+        .card-title {
+            display: block;
+        }
+
+        #quizFilters.collapse {
+            display: block;
+            height: auto !important;
+        }
+    }
+}
+
+.row--quiz {
+    @include breakpoint(lg, min) {
+        display: flex;
+        .order-lg-2 {
+            order: 2;
+        }
+        .order-lg-1 {
+            order: 1;
+        }
+    }
+}

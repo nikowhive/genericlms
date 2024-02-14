@@ -1,0 +1,33 @@
+.sidebar {
+    width: auto; 
+    transition: all 0.3s;
+    overflow-y: auto;
+    height: 100%;
+    background: inherit;
+    @include noScrollBars();
+    @include breakpoint(md, min){
+        width: var(--sidebar-width);
+        @at-root .left-side.collapse-left & {
+            --sidebar-width: 55px !important;
+        }
+    }
+    
+
+    .user-panel {
+        height: 70px;
+        display: none;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        .image {
+            --size: 45px;
+            flex: 0 0 var(--size);
+            img {
+                transition: all 0.3s;
+                width: var(--size);
+                height: var(--size);
+            }
+        }
+    }
+ 
+}

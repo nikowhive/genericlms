@@ -1,0 +1,36 @@
+
+/**
+ *
+ * lists
+ *
+ */
+
+ .lists {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-item {
+        &-link {
+            --iconSize:32px;
+            padding:8px 16px;
+            display: flex;
+            align-items: center;
+            color: var(--bodyColor) !important;
+            .fa {
+                width:var(--iconSize);
+                height:var(--iconSize);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--themeColorLight);
+                border-radius:50%;
+                margin-right: 8px;
+            }
+            
+            &:hover {
+                background-color: #f9f9f9;
+            }
+        }
+    }
+    
+}

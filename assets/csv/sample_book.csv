@@ -1,0 +1,3 @@
+Book,Subject code,Author,Price,Quantity,Rack,ISBN,Call,Additional field enable,Publisher,Published year,Place of publication,Pages,Edition,Second author,Third author,Language,Book Keywords
+Bangla amar,Bangla002015,Dipok,500,15,101,12-343-12022222,3434,1,abc,2000,KTM,300,first,sdsd,sdsd,English,"abc,bsc,dfdf"
+English,eng2017,Rid,300,10,102,12-343-12022255,343434,0,cdf,1991,KTM,100,second,sdsd,sdsd,English,"sdsd,fff,sdsd"

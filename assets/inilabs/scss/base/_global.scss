@@ -1,0 +1,104 @@
+body, html {
+  font-size: 16px;
+  color: #222 !important;
+}
+.list-inline {
+  display: flex;
+  flex-wrap: wrap;
+  > *:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.list-inline-new {
+  display: flex;
+  flex-wrap: wrap;
+  margin:-4px;
+  list-style: none;
+  padding:0;
+  &-item {
+    padding:4px;
+  }
+}
+
+//custrom scrollbar
+* {
+  @include customscrollbar($size: 6px, $trackcolor: none, $thumbcolor: #d4d4d4, $thumbhovercolor: #bdbdbd);
+  scroll-padding: 50px 50px 0 50px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.img-absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+[data-background] {
+  &:after {
+    content: "";
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+}
+
+.icon-round {
+  --size: 52px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s;
+
+  &--primary {
+    background-color: var(--themeColor);
+    color: white;
+  }
+
+  &[role="button"] {
+    --size: 40px;
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+[data-toggle="collapse"] {
+  &.collapsed {
+    .fa-caret-down {
+      transform: rotate(180deg);
+    }
+  }
+  &:not(.collapsed) {
+    .fa-caret-down {
+      transform: rotate(0deg);
+      transition: transform 0.3s ease-in-out;
+      transform-origin: center;
+    }
+  }
+}
+
+.text-primary {
+  color: var(--themeColor) !important;
+}
+
+.position-static {
+  position: static;
+}
+ 

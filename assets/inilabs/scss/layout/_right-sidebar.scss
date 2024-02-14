@@ -1,0 +1,203 @@
+.right-sidebar {
+  --rightSidebarWidth: 458px;
+  --offsetTop: 44px;
+  --offsetBottom: 55px;
+  transition: all 0.3s;
+  position: static !important;
+  @include breakpoint(md, min) {
+    width: var(--rightSidebarWidth);
+    top: calc(var(--headerHeight) + var(--offsetTop));
+    position: fixed !important;
+    height: calc(100vh - var(--headerHeight) - var(--offsetTop) - var(--offsetBottom));
+    overflow-y: auto;
+    &.affix {
+      --offsetTop: 24px;
+      top: calc(var(--offsetTop));
+    }
+  }
+}
+
+ 
+.social-feed,
+.template-rightsidebar {
+  --asideWrapper: 0px;
+  --gutter-right: 0px;
+
+ &-page {
+  @include breakpoint(lg, min) {
+    --asideWrapper: 250px;
+    --gutter-right: 30px;
+  }
+  @include breakpoint(xl, min) {
+    --asideWrapper: 300px;
+  }
+ }
+
+  &-container {
+    margin-right: calc(var(--asideWrapper) + var(--gutter-right));
+  }
+  &-sidebar {
+    --rightSidebarWidth: var(--asideWrapper) !important;
+    right: var(--gutter-right);
+    --offsetBottom: 40px;
+    // --offsetTop:0px;
+    margin-top: 16px;
+    &:not(#js-activities-sidebar) {
+      display: none;
+    }
+    @include breakpoint(lg, min) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    &.affix {
+      @include breakpoint(lg, min) {
+        height: calc(100vh - var(--offsetTop) - var(--offsetBottom)) !important;
+      }
+    }
+  }
+}
+
+/*=============================================
+=            note section            =
+=============================================*/
+.note-section {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  &--show {
+    display: block;
+    margin: 8px 16px;
+    .note-section-form {
+      display: block;
+    }
+  }
+  &-form {
+    display: none;
+    background: white;
+    margin-bottom: 0px;
+    .md-form {
+      // margin-top: 0;
+      margin-bottom: 0;
+    }
+    &-footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 8px;
+    }
+  }
+
+  &-view {
+    display: flex;
+    flex-wrap: nowrap;
+    .js-note-edit {
+      flex: 1;
+    }
+    .icon-round {
+      margin-left: 8px;
+      flex: 0 0 auto;
+      --size:24px;
+    }
+    .dropdown {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      [data-toggle] {
+        font-size: 20px;
+        padding: 12px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/*=============================================
+=            assignment section            =
+=============================================*/
+.assignment-list {
+  position: relative;
+  .class-block {
+    display: flex;
+    justify-content: space-between;
+    [role="button"] {
+      margin-left: 8px;
+      font-weight: bold;
+      padding: 0 8px;
+      background-color: #f5f5f5;
+      transition: all 0.3s;
+      border-radius: 4px;
+      z-index: 2;
+      &:hover {
+        background-color: var(--themeColor);
+        color: white;
+      }
+    }
+  }
+}
+
+.right-sidebar {
+  top:var(--headerHeight);
+  --rightSidebarOffset:0px;
+  right:0;
+  background: white;  
+  height: calc(100vh - var(--headerHeight) - var(--rightSidebarOffset));
+  .card {
+      box-shadow: none;
+      border-radius: 0;
+  }
+  .aside-header {
+    // margin-bottom: 16px;
+    padding: 8px 16px;
+  }
+
+  .aside-title {
+    font-weight: 600;
+    font-size: 16px !important;
+    line-height: 16px;
+  }
+  .aside-body {
+    flex: 1;
+
+    overflow-y: auto;
+    max-height: 300px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .aside-item {
+    padding: 8px 16px;
+    &:not(:last-child) {
+      // margin-bottom: 8px;
+    }
+    &:hover {
+      background: #f9f9f9;
+    }
+  }
+  .aside-section {
+    flex: 1;
+    * {
+      font-size: 14px;
+    }
+
+    // max-height: 400px;
+    overflow-y: auto;
+
+    > .card-body {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      height: auto;
+      &:not(:last-child) {
+        padding-bottom: 16px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.card--attendance {
+    .row-flex {
+        @include breakpoint(md, max) {
+            display: block;
+        }
+    }
+    .card-header {
+        padding: 24px 24px;
+        .row {
+            align-items: center;
+        }
+    }
+    .card-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        color: var(--themeColor);
+        .pill {
+            margin-left: 8px;
+        }
+    }
+
+    .attendance-stats {
+        border: none;
+        margin: 16px 0;
+        --borderColor: #ccc;
+
+        @include breakpoint(md, min) {
+            border-left: 1px solid var(--borderColor);
+            border-right: 1px solid var(--borderColor);
+            text-align: center;
+        }
+    }
+
+    .attendance-action {
+        @include breakpoint(md, min) {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .btn-link {
+            @include breakpoint(md, max) {
+                display: flex !important;
+                justify-content: space-between;
+                border: 1px solid var(--themeColor);
+            }
+        }
+    }
+}
+
+/*=============================================
+=            take attendance            =
+=============================================*/
+
+.attendee-list {
+    counter-reset: student;
+}
+.attendee-lists-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid #ccc;
+
+    &:hover {
+        background-color: #f9f9f9;
+    }
+    &:last-child:hover {
+        border-radius: 0 0 10px 10px;
+    }
+
+    counter-increment: student;
+
+    &:before {
+        @include breakpoint(lg, min) {
+            content: counter(student);
+            flex: 0;
+            margin-right: 16px;
+            align-self: flex-start;
+            flex: 0 0 auto;
+        }
+    }
+    .switch {
+        margin-bottom: 0;
+    }
+    .action {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+        @include breakpoint(lg, min) {
+            align-self: flex-start;
+        }
+        // position: absolute;
+        // right: 16px;
+        // top: 16px;
+        // @include breakpoint(md, min) {
+        //     position: static;
+        // }
+        .dropdown {
+            margin-left: 16px;
+        }
+    }
+
+    .media-block {
+        flex: 1;
+ 
+        &-body {
+            display:flex;
+            flex-direction: column-reverse;
+            @include breakpoint(lg, min) {
+                flex-direction:row;
+            } 
+        }
+        .media-content {
+            flex:1;
+        }
+    }
+
+    .title {
+        display:flex;
+        flex-direction: column;
+        @include breakpoint(md, min){
+            display: block;
+        }
+        .rollnumber {
+            margin-top: 8px;
+        }
+    }
+    .blockquote {
+        @include breakpoint(lg, max){
+            margin-left: -55px;
+        }
+    }
+}

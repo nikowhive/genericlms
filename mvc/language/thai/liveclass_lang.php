@@ -1,0 +1,19 @@
+<?php 
+$lang['panel_title'] = 'คลาสสด';
+$lang['add_title'] = 'เพิ่มคลาสสด';
+$lang['slno'] = '#';
+$lang['liveclass_title'] = 'หัวข้อ';
+$lang['liveclass_date'] = 'วันที่';
+$lang['liveclass_duration'] = 'ระยะเวลา';
+$lang['liveclass_classes'] = 'คลาส';
+$lang['liveclass_section'] = 'มาตรา';
+$lang['liveclass_subject'] = 'เรื่อง';
+$lang['liveclass_select_classes'] = 'เลือกคลาส';
+$lang['liveclass_select_section'] = 'เลือกส่วน';
+$lang['liveclass_select_subject'] = 'เลือกเรื่อง';
+$lang['action'] = 'หนังบู๊';
+$lang['edit'] = 'แก้ไข';
+$lang['delete'] = 'ลบ';
+$lang['join'] = 'เข้าร่วม';
+$lang['add_liveclass'] = 'เพิ่มคลาสสด';
+$lang['update_liveclass'] = 'อัปเดตคลาสสด';

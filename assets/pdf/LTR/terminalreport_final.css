@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Arial";
+    box-sizing: border-box;
+}
+
+table {
+    border-spacing: 1px;
+}
+
+table,
+th,
+.grade-table td, td {
+    border: none;
+    padding: 8px;
+    font-size: 22px;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+.school-info td, .student-detail td {
+    border: none;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+.pdfTable-lg th, .pdfTable-lg td {
+    padding: 6px 8px;
+    font-size: 14px;
+}
+
+.pdfTable--bgmsm th, .pdfTable--bgmsm td {
+    padding: 4px 8px;
+    font-size: 16x;
+}
+
+.container {
+    width:100%;
+    /* width: 96%; */
+    /* margin: 0 auto; */
+}
+
+.trim-yaxis-td>tbody>tr>td:first-child {
+    padding-left: 0;
+}
+
+.trim-yaxis-td>tbody>tr>td:last-child {
+    padding-right: 0;
+}
+
+.grade-sheet {
+    background-color: #212121;
+    color: white !important;
+    text-align: center;
+}
+
+.table-fluid {
+    width: 100%;
+}
+
+.reports,
+.reports th,
+.reports td,
+.grade-table,
+.grade-table th,
+.grade-table td {
+    border: 1px solid #000;
+}
+
+.reports th {
+    background-color: #f9f9f9;
+}
+
+.reports .odd {
+    background-color: #D2E0BC;
+}
+
+.reports tr:nth-of-type(odd) td {
+    background-color: #D2E0BC;
+}
+
+.reports tr:last-child td {
+    background-color: #f9f9f9;
+}
+
+.remarks-table>tbody>tr>td {
+    width: 50%;
+}
+
+.class-teacher-remarks {
+    border: 1px solid #000;
+}
+
+.dot-border-bottom {
+    border-top: 1px dotted black;
+    padding: 5px 0;
+}
+
+.dot-border-top {
+    border-top: 1px dotted black;
+    padding: 5px 0;
+    width: 121px;
+}
+
+.class-teacher-remarks td {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.class-teacher-remarks td p {
+    margin-bottom: 16px;
+}
+
+.footer-td {
+    /* background-color: #f9f9f9; */
+    border-top: 2px solid #ccc;
+    /* padding: 4px 0; */
+}
+
+.report-canvas {
+    overflow-x: auto;
+    width:120%;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+
+.header {
+    display:flex;
+    background:red;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+    
+.header h1 {
+    font-size:20px;
+}
+
+.table-bordered,
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px 12px;
+}
+
+.table-bordered tfoot td {
+    font-weight: bold;
+}
+
+.container.reportTheme-2 {
+    margin: 50px auto;
+    width: 100%;
+    border: 2px solid black;
+}
+.container.reportTheme-2 > tbody > tr > td,
+.container.reportTheme-2 > thead > tr > td,
+.container.reportTheme-2 > tfoot > tr > td {
+    padding: 20px;
+}
+.container.reportTheme-2 .footer {
+    line-height: 30px;
+    border-top: 1px solid black;
+}
+.reportTheme-2 .description {
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.mainBorder {
+    border: 5px solid #879274;
+    padding:15px;
+    height:100%;
+}
+
+/* .mainBorder {
+    border: 5px solid rgb(95, 182, 253);    
+    height:100%;
+    padding:15px;
+} */

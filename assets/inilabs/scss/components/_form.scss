@@ -1,0 +1,19 @@
+.form-label {
+margin-bottom: 12px;
+}
+
+.form-control {
+    color:$body-color;
+}
+
+fieldset {
+    legend {
+        font-weight: bold;
+        border:none;
+    }
+}
+
+select {
+    display:block;
+}
+

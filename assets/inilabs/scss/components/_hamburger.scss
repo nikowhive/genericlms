@@ -1,0 +1,19 @@
+.sidebar-toggle {
+    @include breakpoint(md, min){
+        margin-left: 30px !important;
+    }
+    margin-right: 16px;
+    transition: margin 0.3s;
+
+    @at-root body.menu-toggle & {
+        margin-left: 12px !important;
+    }
+    .icon-bar {
+        background: #333333 !important;
+    }
+    &:hover {
+        .icon-bar {
+            background: #333333 !important; 
+        }
+    }
+}

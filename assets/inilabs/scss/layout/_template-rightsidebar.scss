@@ -1,0 +1,26 @@
+.template-rightsidebar {
+    --bottomOffset:0px;
+    --btnHeight:50px;
+    @include breakpoint(lg, min) {
+        --btnHeight:0px;
+    }
+    padding-bottom:var(--btnHeight);
+    .btn--floating {
+        @include breakpoint(lg, min) {
+            display:none;
+        }
+        position: fixed;
+        bottom:var(--bottomOffset);
+        left:0;
+        right:0;
+        width:100%;
+        height:var(--btnHeight);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .fa {
+            margin-right:8px;
+        }
+
+    }
+}

@@ -1,0 +1,19 @@
+<?php 
+$lang['panel_title'] = '现场课';
+$lang['add_title'] = '添加现场课程';
+$lang['slno'] = '＃';
+$lang['liveclass_title'] = '标题';
+$lang['liveclass_date'] = '日期';
+$lang['liveclass_duration'] = '持续时间';
+$lang['liveclass_classes'] = '类';
+$lang['liveclass_section'] = '部分';
+$lang['liveclass_subject'] = '学科';
+$lang['liveclass_select_classes'] = '选择班级';
+$lang['liveclass_select_section'] = '选择部分';
+$lang['liveclass_select_subject'] = '选择主题';
+$lang['action'] = '行动';
+$lang['edit'] = '编辑';
+$lang['delete'] = '删除';
+$lang['join'] = '加入';
+$lang['add_liveclass'] = '添加直播课程';
+$lang['update_liveclass'] = '更新直播课程';

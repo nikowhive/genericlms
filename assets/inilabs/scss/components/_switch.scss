@@ -1,0 +1,27 @@
+
+/**
+ *
+ * switch
+ *
+ */
+
+.switch-wrapper {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+    > * {
+        margin-bottom: 0;
+    }
+    .switch-label {
+        margin-left: 8px;
+        cursor: pointer;
+        margin-bottom: 0;
+       
+    }
+}
+
+.onoffswitch-small-label {
+    position: relative;
+    margin-bottom: 0;
+}

@@ -1,0 +1,22 @@
+/*=============================================
+=            section            =
+=============================================*/
+
+.section {
+    padding: 40px 0;
+    @include breakpoint(lg, min) {
+        padding: 60px 0;
+    }
+
+    &-title {
+        font-weight: 600;
+        line-height: 150%;
+        margin-bottom: 30px;
+        padding-bottom: 0;
+    }
+    &-stripe {
+        &:nth-child(even) {
+            background-color: #fcfdfd;
+        }
+    }
+}

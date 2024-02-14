@@ -1,0 +1,95 @@
+/*=============================================
+=            mixins            =
+=============================================*/
+@mixin noScrollBars() {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    &::-webkit-scrollbar {
+        /* WebKit */
+        width: 0;
+        height: 0;
+    }
+}
+
+// Breakpoints
+$breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+@mixin breakpoint($breakpoint, $direction) {
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      // Get the breakpoint value.
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+      
+      @if $direction == max {
+        @media (max-width: ($breakpoint-value - 1)) {
+          @content;
+        }
+      } @else if $direction == min {      
+        @media (min-width: $breakpoint-value) {
+          @content;
+        }
+      } 
+    
+    // If the breakpoint doesn't exist in the map.
+    } @else {
+      @if $direction == max {
+        @media (max-width: $breakpoint) {
+          @content;
+        }
+      } @else if $direction == min {      
+        @media (min-width: $breakpoint) {
+          @content;
+        }
+      }  
+    }
+  }
+
+
+  @mixin customscrollbar(
+  $size: 8px,
+  $trackcolor: none,
+  $thumbcolor: $gray-500,
+  $thumbhovercolor: $gray-700
+) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  // Track
+  &::-webkit-scrollbar-track {
+    background: $trackcolor;
+  }
+
+  // Handle
+  &::-webkit-scrollbar-thumb {
+    background: $thumbcolor;
+    border-radius: 5px;
+    background-clip: padding-box;
+  }
+
+  // Handle on hover
+  &::-webkit-scrollbar-thumb:hover {
+    background: $thumbhovercolor;
+  }
+}
+
+@mixin card($radius:10px, $background:white) {
+  border-radius: $radius;
+  background-color:$background;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+  padding:0;
+}
+
+ 

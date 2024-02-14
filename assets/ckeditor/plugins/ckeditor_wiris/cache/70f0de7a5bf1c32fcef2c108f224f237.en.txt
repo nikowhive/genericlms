@@ -1,0 +1,1 @@
+{"result":{"text":"sin squared theta"},"status":"ok"}

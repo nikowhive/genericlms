@@ -1,0 +1,19 @@
+<?php 
+$lang['panel_title'] = 'Cours en direct';
+$lang['add_title'] = 'Ajouter une classe en direct';
+$lang['slno'] = '#';
+$lang['liveclass_title'] = 'Titre';
+$lang['liveclass_date'] = 'Date';
+$lang['liveclass_duration'] = 'Durée';
+$lang['liveclass_classes'] = 'Classe';
+$lang['liveclass_section'] = 'Section';
+$lang['liveclass_subject'] = 'Matière';
+$lang['liveclass_select_classes'] = 'Sélectionnez une classe';
+$lang['liveclass_select_section'] = 'Sélectionnez une section';
+$lang['liveclass_select_subject'] = 'Sélectionnez un sujet';
+$lang['action'] = 'action';
+$lang['edit'] = 'Éditer';
+$lang['delete'] = 'Supprimer';
+$lang['join'] = 'Joindre';
+$lang['add_liveclass'] = 'Ajouter une classe en direct';
+$lang['update_liveclass'] = 'Mettre à jour la classe en direct';

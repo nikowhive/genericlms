@@ -1,0 +1,28 @@
+/*=============================================
+=            accordion bs            =
+=============================================*/
+
+.accordion {
+    &-item {
+        margin-bottom: 8px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px 0px rgba(33, 33, 33, 0.15);
+        .accordion-button {
+            border-radius: 10px;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            font-size: 20px;
+            &-icon-left {
+                &:after {
+                    margin-right: 16px;
+                    order: -1;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    &-body {
+        background-color: var(--themeColorLight);
+    }
+}

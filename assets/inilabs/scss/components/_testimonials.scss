@@ -1,0 +1,71 @@
+/**
+ *
+ * testimonails
+ *
+ */
+
+ .blockquote {
+    position: relative;
+    max-width:992px;
+    border:none;
+    // padding-top: var(--pt);
+    margin: 0 auto;
+    @include media-breakpoint-up(md){
+
+        padding-left: 120px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 150%;
+    }
+    &:before {
+        position: absolute;
+        --size:146px;
+        width:var(--size);
+        height:var(--size);
+        z-index: -1;
+        background-repeat: no-repeat;
+        top:0;
+        left:0;
+        content:'';
+        color:$gray-300;
+        font-size: 500px;
+        line-height: 1;
+        background-image: url("data:image/svg+xml,%3Csvg width='146' height='118' viewBox='0 0 146 118' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.773 58.4996C39.5097 59.2029 45.8397 62.1921 50.763 67.4671C55.6864 72.7421 58.1481 79.4238 58.1481 87.5121C58.1481 96.3038 55.5106 103.513 50.2356 109.14C44.9606 114.415 38.2789 117.052 30.1905 117.052C21.0472 117.052 13.6622 113.711 8.03555 107.03C2.76055 100.348 0.123047 89.9738 0.123047 75.9071C0.123047 48.8288 9.09055 25.4429 27.0256 5.7496C30.5422 2.23294 34.5864 0.474609 39.158 0.474609C43.0264 0.474609 46.3672 1.88129 49.1806 4.69463C51.9939 7.15628 53.4006 10.1454 53.4006 13.6621C53.4006 17.5304 51.9939 20.8713 49.1806 23.6846C40.0372 33.1796 34.2347 44.7846 31.773 58.4996ZM119.338 58.4996C127.075 59.2029 133.405 62.1921 138.328 67.4671C143.251 72.7421 145.713 79.4238 145.713 87.5121C145.713 96.3038 143.076 103.513 137.801 109.14C132.526 114.415 125.844 117.052 117.756 117.052C108.612 117.052 101.227 113.711 95.6006 107.03C90.3256 100.348 87.688 89.9738 87.688 75.9071C87.688 48.8288 96.6556 25.4429 114.591 5.7496C118.107 2.23294 122.151 0.474609 126.723 0.474609C130.591 0.474609 133.932 1.88129 136.746 4.69463C139.559 7.15628 140.966 10.1454 140.966 13.6621C140.966 17.5304 139.559 20.8713 136.746 23.6846C127.602 33.1796 121.8 44.7846 119.338 58.4996Z' fill='%23F2F2F2'/%3E%3C/svg%3E%0A");
+      }
+
+      &-footer {
+          border-top:1px solid $gray-300;
+
+        // display: grid;
+        // grid-template-columns: 1fr auto;
+        // place-items: center;
+        // gap: 20px;
+
+        // &:before {
+        //     content:'';
+        //     height: 1px;
+        //     width: 100%;
+        //     background: $gray-300;
+        // }
+      }
+      .avatar {
+          align-items: center;
+      }
+
+      .avatar__image {
+        --size:60px;
+        width:var(--size);
+        height:var(--size);
+
+      }
+
+}
+
+.js-testimonials {
+    --pt:90px;
+    margin-top: calc(var(--pt)/2);
+    .slick-dots {
+        padding-top: calc(var(--pt)/2);
+      }
+}

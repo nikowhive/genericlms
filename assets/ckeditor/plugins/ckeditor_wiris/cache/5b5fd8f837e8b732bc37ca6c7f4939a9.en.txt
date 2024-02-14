@@ -1,0 +1,1 @@
+{"result":{"text":"2 square root of 2 root index blank of 2 open square brackets 3 divided by 4 plus-or-minus 4 divided by 4 close square brackets end root end root"},"status":"ok"}

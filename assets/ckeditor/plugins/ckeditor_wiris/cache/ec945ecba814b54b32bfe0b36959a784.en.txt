@@ -1,0 +1,1 @@
+{"result":{"text":"2 square root of 23 square root of 23 end root"},"status":"ok"}

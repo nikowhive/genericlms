@@ -1,0 +1,46 @@
+.pill {
+    --radius: 20px;
+    border-radius: var(--radius);
+    display: inline-block;
+    background-color: var(--themeColor);
+    color: white;
+    border: 1px solid transparent;
+    padding: 8px 12px;
+    line-height: 1;
+    transition: all 0.3s;
+    font-weight: 600;
+    @at-root [role="button"]#{&}:not(.pill-light):hover {
+        color: white;
+        background-color: var(--bodyColor);
+    }
+    @at-root [role="button"]#{&}:not(.pill-light):focus {
+        color: white;
+        background-color: var(--bodyColor);
+    }
+    @at-root [role="button"]#{&}:not(.pill-light):active {
+        color: white;
+        background-color: var(--bodyColor);
+    }
+    &-default {
+        background-color: #f1f1f1;
+        color: var(--bodyColor);
+    }
+    &-light {
+        color: var(--themeColor);
+        background-color: var(--themeColorLight);
+        @at-root [role="button"]#{&}:hover {
+            border: 1px solid var(--themeColor);
+        }
+    }
+    &--flat {
+        --radius: 4px;
+    }
+    &--sm {
+        padding: 4px 8px;
+        font-size: 13px;
+    }
+    &--xs {
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+}

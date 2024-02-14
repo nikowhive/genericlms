@@ -1,0 +1,21 @@
+.dropdown {
+    display: inline-block;
+    &-dotted {
+        font-size: 22px;
+        line-height: 1;
+        font-weight: bolder;
+    }
+    &-menu { 
+        &.right {
+            left:auto;
+            right:0;
+        }
+        >li {
+            >a {
+                &:hover {
+                    background-color:var(--themeColor);
+                }
+            }
+        }
+    }
+}

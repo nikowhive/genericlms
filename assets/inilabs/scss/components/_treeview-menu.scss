@@ -1,0 +1,146 @@
+@import "../base/index";
+.treeview-menu {
+    transition: all 0.3s;
+    @include breakpoint(md, min) {
+        font-size: 16px;
+        position: absolute;
+        // top: 0;
+        left: var(--sidebar-width);
+        width: var(--submenu-width);
+        height: calc(100vh - var(--headerHeight));
+        @at-root .sidebar-menu.sticky & {
+            height: calc(100vh);
+        }
+        bottom: 0;
+        padding-bottom: var(--headerHeight) !important;
+        overflow-y: auto;
+        box-shadow: 1px 0 2px rgba(0, 0, 0, 0.25);
+        // @include noScrollBars();
+        opacity: 0;
+        z-index: -1;
+        @include noScrollBars();
+        &:hover {
+            @include customscrollbar($size: 6px, $trackcolor: none, $thumbcolor: #D4D4D4, $thumbhovercolor:#BDBDBD);
+            scroll-padding: 50px 50px 0 50px;
+        }
+    }
+    //treeview-menu.active
+    &.active {
+        display: block;
+        opacity: 1;
+        z-index: 500;
+        @include breakpoint(md, min) {
+            position: fixed;
+        }
+    }
+    //treeview.active .treeview-menu
+    @at-root .treeview.active & {
+        display: block;
+        @include breakpoint(md, min) {
+            position: fixed;
+            opacity: 1;
+            z-index: 500;
+            background-color: #fff !important;
+            width: var(--submenu-width);
+        }
+    }
+
+    //treeview-menu.collapse-submenu
+    &.collapse-submenu {
+        @include breakpoint(md, min){
+        width: var(--submenu-width) !important;
+        }
+        > li > a {
+            span {
+                @include breakpoint(md, min){
+                    display: none;
+                }
+            }
+        }
+    }
+
+    //treeview-menu li
+    li {
+        background-color: #fff !important;
+        &:not(.active) {
+            &:hover {
+                background-color: #f9f9f9;
+                color: var(--bodyColor);
+            }
+
+            //treeview-menu li a:hover
+            a {
+                &:hover {
+                    background-color: #f9f9f9 !important;
+                    color: var(--bodyColor) !important;
+                }
+            }
+        }
+        //treeview-menu li a
+        a {
+            padding: 10px 10px !important;
+            color: var(--bodyColor) !important;
+            align-items: center;
+            display: flex;
+            font-size:12px !important;
+            @include breakpoint(md, min){
+                font-size:12px !important;
+
+            }
+
+
+            //treeview-menu li a.fa
+            .fa {
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // background-color: #2d353c;
+                border-radius: 50%;
+                flex: 0 0 35px;
+                background-color: var(--themeColorLight) !important;
+                color: var(--bodyColor) !important;
+                margin-right: 8px;
+                margin-top: 4px;
+                margin-right: 8px;
+            }
+
+            //treeview-menu li a span
+            span {
+                margin-top: 0;
+            }
+        }
+
+        //treeview-menu li.active
+        &.active {
+            background-color: var(--themeColorLight) !important ;
+            a .fa {
+                background-color: var(--themeColor) !important;
+                color: white !important;
+            }
+        }
+
+        //treeview-menu li.toggleDiv
+        &.toggleDiv {
+            display:none;
+            @include breakpoint(md, min){
+                display:flex;
+                flex-direction: row;
+                border-bottom: 1px solid #a4b1c2;
+            }
+            & > a {
+                // color: white !important;
+                flex-direction: row !important;
+                width: 100%;
+                span {
+                    margin-top: 0 !important;
+                }
+                .fa {
+                    background-color: transparent !important;
+                    color: var(--bodyColor) !important;
+                }
+            }
+        }
+    }
+}

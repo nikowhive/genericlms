@@ -1,0 +1,64 @@
+
+/**
+ *
+ * checkbox
+ *
+ */
+
+.checkbox {
+    input[type="checkbox"]{
+        transform:translateY(3px);
+    }
+
+    &--pill {
+        input[type="checkbox"]{
+            display: none;
+        }
+        .pill {
+            background-color: white;
+            border:1px solid #222;
+            color:var(--bodyColor); 
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+    }
+}
+
+
+.checkbox--pill {
+    .pill {
+        display: inline-flex;
+        transform:all 500ms ease;;
+        align-items: center;
+        margin-bottom: 0;
+           &:before {
+                font-family: "fontawesome";
+                content: "\f00c";
+                display: inline-block;
+                transform:scale(0);
+               
+                display: none;
+                margin-right: 8px;
+                
+            }
+            
+
+    }
+       
+     &:hover {
+           .pill {
+               background-color: #f1f1f1;
+           }
+       }
+       
+   input[type="checkbox"]:checked + .pill {
+           background-color:var(--themeColor);
+           color:white;
+             &:before {
+                display: block;
+                transform: scale(1);
+                
+            }
+       }
+       
+   }

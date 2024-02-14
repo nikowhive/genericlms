@@ -1,0 +1,76 @@
+.modal{
+    --size:100%;
+    --size-md:700px;
+    --size-lg:800px;
+    --size-xl:1140px;
+
+    overflow-x: hidden;
+    overflow-y:auto;
+    width:100%;
+    height:100%;
+    &-dialog {
+        margin: 1.75rem auto;
+        min-height: calc(100% - 3.5rem);
+        width:auto  !important;
+        max-width:var(--size) ;
+        // height:calc(100vh - 60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+ 
+        @include breakpoint(sm, min){
+            --size:600px; 
+
+        }
+        &-lg {
+            --size:90%;
+            @include breakpoint(lg, min){
+                --size:800px;
+            }
+        }
+        &-xl {
+            --size:90%;
+            @include breakpoint(xl, min){
+                --size:1140px;
+            }
+        }
+
+
+        &-scrollable {
+            height: calc(100% - 3.5rem);
+            .modal-body {
+                overflow-y: auto;
+            }
+            .modal-content {
+                max-height: 100%;
+            }
+        }
+    }
+    &-content {
+       
+            width: 100%;
+            display: flex;
+    flex-direction: column;
+ 
+    }
+    &-body {
+        flex: 1 1 auto;
+    }
+    &-header {
+        flex-shrink: 0;
+    }
+    &-footer {
+        flex-shrink: 0;
+    }
+    &-footer {
+        border-top:0px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+
+// image grid modal
+.imgs-grid-modal {
+    z-index: 101 !important;
+}

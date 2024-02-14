@@ -1,0 +1,19 @@
+<?php 
+$lang['panel_title'] = 'Живой класс';
+$lang['add_title'] = 'Добавить живой класс';
+$lang['slno'] = '#';
+$lang['liveclass_title'] = 'заглавие';
+$lang['liveclass_date'] = 'Дата';
+$lang['liveclass_duration'] = 'Продолжительность';
+$lang['liveclass_classes'] = 'Учебный класс';
+$lang['liveclass_section'] = 'Раздел';
+$lang['liveclass_subject'] = 'Предмет';
+$lang['liveclass_select_classes'] = 'Выберите класс';
+$lang['liveclass_select_section'] = 'Выбрать раздел';
+$lang['liveclass_select_subject'] = 'Выберите тему';
+$lang['action'] = 'Действие';
+$lang['edit'] = 'редактировать';
+$lang['delete'] = 'Удалить';
+$lang['join'] = 'Присоединиться';
+$lang['add_liveclass'] = 'Добавить живой класс';
+$lang['update_liveclass'] = 'Обновить Live Class';

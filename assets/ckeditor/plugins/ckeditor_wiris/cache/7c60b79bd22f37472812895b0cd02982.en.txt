@@ -1,0 +1,1 @@
+{"result":{"text":"begin mathsize 18px style f open parentheses x close parentheses equals x squared end style"},"status":"ok"}

@@ -1,0 +1,72 @@
+/*=============================================
+=            cards            =
+=============================================*/
+
+.card {
+    @include card();
+    position: relative;
+    --padding-y:16px;
+    --padding-x:16px;
+
+    &--spaced {
+        --padding-x: 24px;
+        --padding-y: 20px;
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: var(--padding-y) var(--padding-x);
+    }
+
+    &-title {
+        margin: 0;
+        margin-bottom: 16px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .lists {
+        list-style: none;
+        padding: 0;
+        flex-grow: 1;
+        overflow-y: auto;
+        > li {
+            padding: 8px 0;
+            &:not(:last-child) {
+                border-bottom: 1px solid #f1f1f1;
+
+                padding: 8px 0;
+            }
+        }
+    }
+
+    &-anchor-absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        transition: all 0.3s;
+        &:hover {
+            background-color: var(--themeColor);
+            * {
+                color: white;
+            }
+        }
+
+        .fa {
+            font-size: 64px;
+        }
+        span {
+            font-size: 24px;
+        }
+    }
+}

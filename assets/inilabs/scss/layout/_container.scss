@@ -1,0 +1,14 @@
+.container {
+    &--md {
+        max-width:992px !important;
+        width:100%;
+    }
+    &--sm {
+        max-width:768px !important;
+        width:100%; 
+    }
+    &--xs {
+        max-width:540px !important;
+        width:100%; 
+    }
+}

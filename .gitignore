@@ -1,0 +1,14 @@
+vendor/
+node_modules/
+uploads/
+logs/
+mvc/logs/
+.idea/
+manifest.json
+assets/manifest.json
+serviceWorker.js
+docs/
+mvc/config/development/database.php
+mvc/session/*
+mvc/cache/*
+application/

@@ -1,0 +1,32 @@
+/*=============================================
+=            list grup            =
+=============================================*/
+.course-menu {
+    .list-group {
+        &-item {
+            --iconsize: 10px;
+            --iconbg: transparent;
+            border: none;
+            color: #222;
+            display: flex;
+            &:before {
+                content: "";
+                width: var(--iconsize);
+                height: var(--iconsize);
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 10px;
+                background-color: var(--iconbg);
+                flex: 0 0 auto;
+                margin-top: 8px;
+            }
+            &.active {
+                --iconbg: var(--themeColor);
+                font-weight: bold;
+            }
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+}
