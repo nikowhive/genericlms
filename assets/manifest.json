@@ -1,0 +1,27 @@
+{
+    "name": "VIE", 
+    "short_name": "Vie", 
+    "description": "A school management system.", 
+    "scope": "/",
+    "start_url": "/", 
+    "orientation": "portrait", 
+    "display": "standalone", 
+    "background_color": "#ffffff", 
+    "theme_color": "#ffffff", 
+    "prompt_message": "Add a Home screen icon for easy access to Eduwise Nepal.", 
+    "icons": [
+        {"src": "https://vie.eduwise.com.au/uploads/images/site.png", 
+            "sizes": "144x144", 
+            "type": "image/png"
+        }, 
+        {
+            "src": "https://vie.eduwise.com.au/uploads/images/site.png", 
+            "sizes": "192x192", "type": "image/png"
+        },
+        {
+            "src": "https://vie.eduwise.com.au/uploads/images/site.png", 
+            "sizes": "512x512", "type": "image/png"
+        }
+    ],
+    "status": "ok"
+}
